@@ -7,6 +7,10 @@ class AdminController extends BackendController
 {
     public function login()
     {
+        if (IS_POST)
+        {
+            
+        }
         $this->display();
     }
 }
