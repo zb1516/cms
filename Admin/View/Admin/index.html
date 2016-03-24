@@ -1,0 +1,57 @@
+<include file="Public:nav"/>
+	<div class="container-fluid" id="content">
+	<include file="Public:left"/>
+		<div id="main">
+			<div class="container-fluid">
+				<div class="page-header">
+					<div class="pull-left">
+						<h1>Basic tables</h1>
+					</div>
+				</div>
+				<%:W('Common/menu/menu')%>
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="box box-color box-bordered">
+							<div class="box-title">
+								<h3>
+									<i class="icon-table"></i>
+									管理列表
+								</h3>
+							</div>
+							<div class="box-content nopadding">
+								<empty name="list">
+									<p>暂时没有数据</p>
+								<else />
+								<table class="table table-hover table-nomargin">
+									<thead>
+										<tr>
+											<th>编号</th>
+											<th>用户名</th>
+											<th class='hidden-350'>状态</th>
+											<th class='hidden-1024'>注册时间</th>
+											<th class='hidden-480'>操作</th>
+										</tr>
+									</thead>
+									<tbody>
+									<volist name="list" id="vo">
+										<tr>
+											<td><%$vo.user_id%></td>
+											<td><%$vo.user_name%></td>
+											<td class='hidden-350'><%$vo.state%></td>
+											<td class='hidden-1024'><%$vo.add_time%></td>
+											<td class='hidden-480'>编辑|删除</td>
+										</tr>
+									</volist>
+									</tbody>
+								</table>
+								</empty>
+								<%$page%>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+

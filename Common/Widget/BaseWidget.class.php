@@ -1,12 +1,9 @@
 <?php
 namespace Common\Widget;
 
-use Common\Controller\BaseController;
+use Common\Controller\BackendController;
 
-class BaseWidget extends BaseController
+class BaseWidget extends BackendController
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
+    
 }
